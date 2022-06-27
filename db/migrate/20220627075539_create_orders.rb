@@ -4,5 +4,6 @@ class CreateOrders < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+add_index :orders, :customer_id
   end
 end
