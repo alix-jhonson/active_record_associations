@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220627093747) do
+ActiveRecord::Schema.define(version: 20220627100320) do
 
   create_table "accounts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.string   "appointment_date"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "boys", force: :cascade do |t|
@@ -30,6 +36,12 @@ ActiveRecord::Schema.define(version: 20220627093747) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "doctors", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "men", force: :cascade do |t|
     t.integer  "man_id"
     t.string   "name"
@@ -38,6 +50,17 @@ ActiveRecord::Schema.define(version: 20220627093747) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "physicians", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
