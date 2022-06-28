@@ -1,4 +1,4 @@
 class Customer < ActiveRecord::Base
-belongs_to :account
+has_many :orders
 end
 
