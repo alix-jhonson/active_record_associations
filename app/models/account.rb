@@ -1,3 +1,3 @@
 class Account < ActiveRecord::Base
-  belongs_to :customer, inverse_of: :account
+  has_one :account, -> { where "confirmed = 1" }
 end
